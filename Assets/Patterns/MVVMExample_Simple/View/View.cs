@@ -33,5 +33,25 @@ namespace Patterns.MVVMExample_Simple
         protected abstract void DisplayStrView(int val);
         protected abstract void DisplayDexView(int val);
         protected abstract void DisplayVitView(int val);
+
+        protected virtual void Dispose()
+        {
+            // Отписка от изменений STR,DEX и VIT
+            _viewModel.StrView.OnChanged -= DisplayStrView;
+            _viewModel.DexView.OnChanged -= DisplayDexView;
+            _viewModel.VitView.OnChanged -= DisplayVitView;
+
+            _viewModel.StatsToSpendView.OnChanged -= DisplayStatsToSpend;
+
+            // Отписка от изменений состояния кнопок
+            _viewModel.StrButtonEnabled.OnChanged -= OnStrButtonEnabled;
+            _viewModel.DexButtonEnabled.OnChanged -= OnDexButtonEnabled;
+            _viewModel.VitButtonEnabled.OnChanged -= OnVitButtonEnabled;
+        }
+
+        protected void OnDestroy()
+        {
+            Dispose();
+        }
     }
 }

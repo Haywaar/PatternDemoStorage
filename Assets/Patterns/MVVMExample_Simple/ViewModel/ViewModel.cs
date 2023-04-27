@@ -111,5 +111,15 @@
         {
             DefineButtonsStatus();
         }
+
+        // Отписываемся
+        public virtual void Dispose()
+        {
+            _model.STR.OnChanged -= OnModelStrChanged;
+            _model.DEX.OnChanged -= OnModelDexChanged;
+            _model.VIT.OnChanged -= OnModelVitChanged;
+
+            StatsToSpendView.OnChanged -= OnModelStatsToSpendViewChanged;
+        }
     }
 }

@@ -118,5 +118,12 @@ namespace Patterns.MVVMExample
             _isWin = isWin;
             ViewIsWinChanged?.Invoke(isWin);
         }
+
+        public virtual void Dispose()
+        {
+            _model.StateChanged -= OnStateChanged;
+            _model.GoldChanged -= OnGoldChanged;
+            _model.IsWinChanged -= OnIsWinChanged;
+        }
     }
 }
