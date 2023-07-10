@@ -1,22 +1,19 @@
-﻿namespace Patterns.IncapsulationExampleGood.Scripts.Units
+﻿public class Warrior : Unit
 {
-    public class Warrior : Unit
+    public override int GetPrice()
     {
-        public override int GetPrice()
+        if (IsThird())
         {
-            if (IsThird())
-            {
-                return 15;
-            }
-            else
-            {
-                return 10;
-            }
+            return 15;
         }
-        
-        public void Attack()
+        else
         {
-            // Melee Attack
+            return 10;
         }
+    }
+
+    public void Attack()
+    {
+        // Melee Attack
     }
 }

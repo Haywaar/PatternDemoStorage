@@ -1,21 +1,18 @@
-﻿namespace Patterns.IncapsulationExampleGood.Scripts.Units
+﻿public class Mage : Unit
 {
-    public class Mage : Unit
+    public override int GetPrice()
     {
-        public override int GetPrice()
+        if (IsThird())
         {
-            if (IsThird())
-            {
-                return 40;
-            }
-            else
-            {
-                return 20;
-            }
+            return 40;
         }
-        
-        public void CastSpell()
+        else
         {
+            return 20;
         }
+    }
+
+    public void CastSpell()
+    {
     }
 }

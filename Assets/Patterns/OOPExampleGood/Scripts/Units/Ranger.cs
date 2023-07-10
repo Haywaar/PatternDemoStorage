@@ -1,15 +1,12 @@
-﻿namespace Patterns.IncapsulationExampleGood.Scripts.Units
+﻿public class Ranger : Unit
 {
-    public class Ranger : Unit
+    public override int GetPrice()
     {
-        public override int GetPrice()
+        if (IsThird())
         {
-            if (IsThird())
-            {
-                return 10;
-            }
-
-            return 30;
+            return 10;
         }
+
+        return 30;
     }
 }
