@@ -8,7 +8,7 @@ namespace Patterns.MVVMExample
         [SerializeField] private SlotMachineUIView _uiView;
         
         [SerializeField] private bool is3D;
-        [SerializeField] private bool is3LineLogic;
+        [SerializeField] private bool isOnlyCentralLineLogic;
 
         private ViewModel _viewModel;
         private void Start()

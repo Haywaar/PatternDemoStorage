@@ -8,7 +8,7 @@ public class MainScript : MonoBehaviour
   [SerializeField] private Button _spinButton;
 
   [SerializeField] private bool is3D;
-  [SerializeField] private bool is3LineLogic;
+  [SerializeField] private bool isOnlyCentralLineLogic;
   
   private void Awake()
   {
@@ -16,7 +16,7 @@ public class MainScript : MonoBehaviour
 
     var view = Instantiate(viewPrefab);
     Model model = new UnlimitedSpinsModel(view);
-    Controller controller = is3LineLogic ? new CentralLineController(view, model) : new AllLinesController(view,model);
+    Controller controller = isOnlyCentralLineLogic ? new CentralLineController(view, model) : new AllLinesController(view,model);
 
     
     _spinButton.onClick.AddListener((() =>
