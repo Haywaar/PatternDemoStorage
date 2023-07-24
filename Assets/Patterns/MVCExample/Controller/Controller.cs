@@ -4,12 +4,10 @@ using UnityEngine;
 
 public abstract class Controller
 {
-   protected View _view;
    protected Model _model;
 
-   public Controller(View view, Model model)
+   public Controller(Model model)
    {
-      _view = view;
       _model = model;
    }
 
@@ -24,8 +22,8 @@ public abstract class Controller
       }
 
       _model.SetState(tempState);
-      AnalyzeResult();
+      _model.SetWinState(AnalyzeWinResult(tempState));
    }
 
-   protected abstract void AnalyzeResult();
+   protected abstract bool AnalyzeWinResult(List<int> newState);
 }

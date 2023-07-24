@@ -16,8 +16,7 @@ public class MainScript : MonoBehaviour
 
     var view = Instantiate(viewPrefab);
     Model model = new UnlimitedSpinsModel(view);
-    Controller controller = isOnlyCentralLineLogic ? new CentralLineController(view, model) : new AllLinesController(view,model);
-
+    Controller controller = isOnlyCentralLineLogic ? new CentralLineController(model) : new AllLinesController(model);
     
     _spinButton.onClick.AddListener((() =>
     {

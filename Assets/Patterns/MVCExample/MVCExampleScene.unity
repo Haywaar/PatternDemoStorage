@@ -156,7 +156,7 @@ MonoBehaviour:
   _uiView: {fileID: 3741806424737440768, guid: 8590f09cbc30fb54eb9f662dada76b63, type: 3}
   _spinButton: {fileID: 1249383597}
   is3D: 0
-  is3LineLogic: 0
+  isOnlyCentralLineLogic: 0
 --- !u!4 &347266238
 Transform:
   m_ObjectHideFlags: 0

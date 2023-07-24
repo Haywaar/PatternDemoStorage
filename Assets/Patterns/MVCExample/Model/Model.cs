@@ -11,7 +11,11 @@ public abstract class Model
    public abstract bool HaveSpins();
    protected int _spinsCount;
    public int SpinsCount => _spinsCount;
-   
+
+   protected bool _isWin;
+
+   public bool IsWin => _isWin;
+
    public Model(View view)
    {
       _view = view;
@@ -22,5 +26,11 @@ public abstract class Model
    {
       _state = newState;
       _view.DisplaySpinResult(_state);
+   }
+
+   public void SetWinState(bool isWin)
+   {
+      _isWin = isWin;
+      _view.DisplayYouWinText(_isWin);
    }
 }
