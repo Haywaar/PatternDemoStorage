@@ -7,16 +7,14 @@ namespace Patterns.DIExample_Zenject.Scripts
     {
         [SerializeField] private PlayerInputController _playerInputController;
         
+        [Inject]
         private IDamageCalculator _damageCalculator;
+        [Inject]
         private DamageVisualizer _damageVisualizer;
 
-        [Inject]
-        private void Construct(IDamageCalculator damageCalculator, DamageVisualizer damageVisualizer)
+        private void Awake()
         {
-            _damageCalculator = damageCalculator;
-            _damageVisualizer = damageVisualizer;
-            
-            _playerInputController.EnemyAttackRequest += OnEnemyAttackRequest;
+             _playerInputController.EnemyAttackRequest += OnEnemyAttackRequest;
         }
         
         private void OnEnemyAttackRequest(Enemy enemy)

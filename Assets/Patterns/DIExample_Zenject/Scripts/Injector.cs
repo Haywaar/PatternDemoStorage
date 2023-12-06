@@ -23,8 +23,8 @@ public class Injector : MonoInstaller
     [Header("Enemy Spawn Data")] [SerializeField]
     private EnemySpawner _spawner;
     [SerializeField] private EnemyFactoryType _enemyFactoryType;
-    [SerializeField]
-    private SingleEnemyFactory _singleEnemyFactory;
+   
+    [SerializeField] private SingleEnemyFactory _singleEnemyFactory;
     [SerializeField] private RandomEnemyFactory _randomEnemyFactory;
 
     [SerializeField] private InputType _inputType;
