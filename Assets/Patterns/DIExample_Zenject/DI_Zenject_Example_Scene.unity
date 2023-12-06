@@ -351,7 +351,7 @@ MonoBehaviour:
   _enemyFactoryType: 0
   _singleEnemyFactory: {fileID: 423092287}
   _randomEnemyFactory: {fileID: 1949683952}
-  _inputType: 1
+  _inputType: 0
 --- !u!4 &425914364
 Transform:
   m_ObjectHideFlags: 0
