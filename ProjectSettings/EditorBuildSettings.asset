@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Patterns/Command/BadExample/CommandBadScene.unity
+    guid: 76fa9a13bfd958445b18b69fe3c7c18e
   m_configObjects: {}

@@ -1,0 +1,5 @@
+{
+    "dotnet.preferCSharpExtension": true,
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontSize": 16
+}
