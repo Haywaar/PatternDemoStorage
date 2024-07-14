@@ -1,4 +1,4 @@
-public class DamageDecorator : DamageComponent
+public abstract class DamageDecorator : DamageComponent
 {
     protected DamageComponent _component;
 
