@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Patterns.DIExample_Zenject.Scripts;
 using Patterns.DIExample_Zenject.Scripts.PlayerInput;
 using Patterns.DIExample_Zenject.Scripts.Services.Calculator.DamageCalculators;
@@ -44,7 +44,6 @@ public class Injector : MonoInstaller
         var inputHandler = SelectInputHandler(_inputType);
         Container.Bind<InputHandler>().FromInstance(inputHandler);
 
-        //Container.Bind(typeof(ITickable), typeof(ILateTickable), typeof(IFixedTickable)).To<TestLogScript>().AsSingle();
         Container.BindInterfacesTo<TestLogScript>().AsSingle();
     }
 
