@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class TickEverySecondScript : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _titleText;
     [SerializeField] private Button _button;
     [SerializeField] private TextMeshProUGUI _buttonText;
 
@@ -16,8 +15,6 @@ public class TickEverySecondScript : MonoBehaviour
 
     private void Awake()
     {
-        _titleText.text = "Таймер срабатывает каждую секунду";
-
         _button.onClick.AddListener(() => StartTimer());
     }
 

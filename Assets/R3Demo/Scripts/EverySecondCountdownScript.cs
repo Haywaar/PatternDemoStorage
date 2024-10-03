@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class EverySecondCountdownScript : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _titleText;
     [SerializeField] private Button _button;
     [SerializeField] private TextMeshProUGUI _buttonText;
     [SerializeField] private double _timeLeft = 10;
@@ -15,8 +14,6 @@ public class EverySecondCountdownScript : MonoBehaviour
 
     private void Awake()
     {
-        _titleText.text = "Считает с 10 до 0 а затем останавливается";
-
         _button.onClick.AddListener(() => StartTimer());
     }
 

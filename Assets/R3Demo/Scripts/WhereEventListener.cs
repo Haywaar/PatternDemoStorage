@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using R3;
 
-public class ParamsEventListener : MonoBehaviour
+public class WhereEventListener : MonoBehaviour
 {
     [SerializeField] private ParamsEventInvoker _paramsEventInvoker;
     [SerializeField] private TextMeshProUGUI _buttonText;

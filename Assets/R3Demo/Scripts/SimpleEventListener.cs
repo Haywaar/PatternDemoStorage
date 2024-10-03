@@ -5,6 +5,8 @@ public class SimpleEventListener : MonoBehaviour
 {
     [SerializeField] private SimpleEventInvoker _simpleEventInvoker;
 
+    private CompositeDisposable _disposable = new CompositeDisposable();
+
     private void Awake()
     {
         _simpleEventInvoker.OnSimpleEvent += OnSimpleEvent;
@@ -12,7 +14,7 @@ public class SimpleEventListener : MonoBehaviour
         _simpleEventInvoker
         .OnSimpleR3Event
         .Subscribe(_ => OnSimpleR3Event())
-        .AddTo(this);
+        .AddTo(_disposable);
     }
 
     private void OnSimpleEvent()
@@ -23,5 +25,10 @@ public class SimpleEventListener : MonoBehaviour
     private void OnSimpleR3Event()
     {
        Debug.Log("SimpleR3Event Handled");
+    }
+
+    private void OnDestroy()
+    {
+        _disposable.Dispose();
     }
 }

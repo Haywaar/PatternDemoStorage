@@ -519,7 +519,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0412\u043E\u0441\u043F\u0440\u0438\u043D\u0438\u043C\u0430\u0435\u0442
+  m_text: "<color=#44ccff>Throttle</color>\n\u0412\u043E\u0441\u043F\u0440\u0438\u043D\u0438\u043C\u0430\u0435\u0442
     \u0442\u043E\u043B\u044C\u043A\u043E 1 \u043A\u043B\u0438\u043A \u0432 \u0441\u0435\u043A\u0443\u043D\u0434\u0443"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -529,8 +529,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4288544253
-  m_fontColor: {r: 0.9921569, g: 0.9921569, b: 0.6156863, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
