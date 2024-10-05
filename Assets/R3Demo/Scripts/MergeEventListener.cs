@@ -13,6 +13,7 @@ public class MergeEventListener : MonoBehaviour
     private void Awake()
     {
         _paramsEventInvoker_1.ParamsR3Event
+        //.Select(x => ConvertDataStreamSomehow(x))
         .Merge(_paramsEventInvoker_2.ParamsR3Event)
         .Subscribe(x => DisplayText(x))
         .AddTo(this);
