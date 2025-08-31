@@ -16,7 +16,7 @@ namespace Patterns.OOPExampleGood.Scripts.EncapsulationDemo
             _slider.value = (float) (health / _player.MaxHealth);
             _healthText.text = "Health: " + health;
             
-            _player.TakeDamage(10000);
+
         }
     }
 }
